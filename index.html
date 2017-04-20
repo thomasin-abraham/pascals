@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>pixels</title>
+    <script src="https://use.fontawesome.com/a31d2079c7.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="biginteger.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+  <div class="userinputs">
+    <p>
+      <strong>Pascal's Triangle</strong><br>
+
+    Pascal's triangle is a number triangle where each number is the sum of the number above to the left and above to the right. In this case the numbers are represented by asterisks. White asterisks are numbers that are multiples of <span id="multiplenum">2</span>. These can form some beautiful patterns. Play around with different multiples to create different patterns (prime numbers are interesting)
+  </p>
+
+    Highlight multiples of this number:
+      <div class="inputrow">
+        <input type="text" id="multiplierInput" value="2"></input>
+        <button id="submit-multiplier" onclick="userInputUpdate('multiplier')">go</button>
+        <i id="multiplierLoading" class="fa fa-spinner fa-2x fa-pulse fa-fw hidden"></i>
+      </div>
+    Number of rows in triangle: (max 200)
+      <div class="inputrow">
+        <input type="text" id="rowInput" value=""></input>
+        <button id="submit-row" onclick="userInputUpdate('row')">go</button>
+        <i id="rowLoading" class="fa fa-spinner fa-2x fa-pulse fa-fw hidden"></i>
+      </div>
+      <p></p>
+      <div class="inputrow">
+        <button id="submit-reset" onclick="resetTriangle()">reset rows (fit to screen)</button>
+      </div>
+
+      <span class="moreinfo">
+        <p>made using the <a href="https://silentmatt.com/biginteger/">Big Integer</a> library<br>
+        best viewed on medium + size screens</p>
+      </div>
+  </div>
+
+  <div class="number" id="displaynum">
+    hover over an asterisk to display corresponding value
+  </div>
+
+  <div id="asterisks">
+  </div>
+
+  </body>
+</html>
